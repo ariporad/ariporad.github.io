@@ -2286,12 +2286,35 @@ ul.icons li .icon:before {
 ul.contact {
   list-style: none;
   padding: 0;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-align-items: -moz-flex-start;
+  -webkit-align-items: -webkit-flex-start;
+  -ms-align-items: -ms-flex-start;
+  align-items: flex-start;
 }
 ul.contact li {
   text-decoration: none;
-  margin: 2.5em 0 0 0;
   padding: 0 0 0 3.25em;
   position: relative;
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
 }
 ul.contact li:before {
   -moz-osx-font-smoothing: grayscale;
@@ -2321,7 +2344,13 @@ ul.contact li:before {
 ul.contact li:first-child {
   margin-top: 0;
 }
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 980px) {
+  ul.contact {
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
   ul.contact li {
     margin: 1.5em 0 0 0;
   }
@@ -3442,9 +3471,6 @@ body.is-preload #banner p {
 }
 #footer .inner form {
   margin: 0 3em 0 0;
-  width: calc(50% - 1.5em);
-}
-#footer .inner .contact {
   width: calc(50% - 1.5em);
 }
 #footer .inner .copyright {

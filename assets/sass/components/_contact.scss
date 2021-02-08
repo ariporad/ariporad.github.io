@@ -10,11 +10,18 @@ ul.contact {
 	list-style: none;
 	padding: 0;
 
+	@include vendor('display', 'flex');
+	@include vendor('flex-direction', 'row');
+	@include vendor('flex-wrap', 'wrap');
+	@include vendor('justify-content', 'space-between');
+	@include vendor('align-items', 'flex-start');
+
 	li {
 		@include icon;
-		margin: (_size(element-margin) * 1.25) 0 0 0;
 		padding: 0 0 0 3.25em;
 		position: relative;
+
+		@include vendor('flex-grow', '1');
 
 		&:before {
 			border-radius: 100%;
@@ -35,7 +42,9 @@ ul.contact {
 		}
 	}
 
-	@include breakpoint('<=small') {
+	@include breakpoint('<=medium') {
+		@include vendor('flex-direction', 'column');
+
 		li {
 			margin: (_size(element-margin) * 0.75) 0 0 0;
 		}
