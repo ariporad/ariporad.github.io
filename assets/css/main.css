@@ -264,7 +264,7 @@ a {
 }
 a:hover {
   border-bottom-color: transparent;
-  color: #ffffff !important;
+  color: #bfbfbf;
 }
 a.special:not(.brands) {
   text-decoration: none;
@@ -2171,6 +2171,12 @@ ul.actions li {
   padding: 0 0 0 1em;
   vertical-align: middle;
 }
+.wrapper:not(.alt) ul.actions {
+  -moz-justify-content: -moz-flex-end;
+  -webkit-justify-content: -webkit-flex-end;
+  -ms-justify-content: -ms-flex-end;
+  justify-content: flex-end;
+}
 ul.actions.special {
   -moz-justify-content: center;
   -webkit-justify-content: center;
@@ -3236,12 +3242,32 @@ body.is-preload #banner p {
   border-radius: 100%;
   margin: 0 3em 2em 0;
   width: 22em;
+  height: 22em;
   overflow: hidden;
   -ms-flex: 1;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .wrapper.spotlight .image img {
   border-radius: 100%;
   width: 100%;
+}
+.wrapper.spotlight .image.frc-logo {
+  background-image: url(/images/first.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 0;
 }
 .wrapper.spotlight .content {
   width: 100%;
@@ -3253,6 +3279,9 @@ body.is-preload #banner p {
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
   text-align: right;
+}
+.wrapper.spotlight:nth-child(2n-1) .inner ul {
+  text-align: left;
 }
 .wrapper.spotlight:nth-child(2n-1) .image {
   margin: 0 0 2em 3em;

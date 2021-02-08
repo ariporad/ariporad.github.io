@@ -175,12 +175,25 @@
 			border-radius: 100%;
 			margin: 0 _size(section-spacing, large) _size(element-margin) 0;
 			width: 22em;
+			height: 22em;
 			overflow: hidden;
 			-ms-flex: 1;
+
+			@include vendor('display', 'flex');
+			@include vendor('justify-content', 'center');
+			@include vendor('flex-direction', 'column');
 
 			img {
 				border-radius: 100%;
 				width: 100%;
+			}
+
+			&.frc-logo {
+				background-image: url(/images/first.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position: 50% 50%;
+				border-radius: 0;
 			}
 		}
 
@@ -193,6 +206,9 @@
 			.inner {
 				@include vendor('flex-direction', 'row-reverse');
 				text-align: right;
+				ul {
+					text-align: left;
+				}
 			}
 
 			.image {

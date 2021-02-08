@@ -18,6 +18,10 @@ ul.actions {
 		vertical-align: middle;
 	}
 
+	.wrapper:not(.alt) & {
+		@include vendor('justify-content', 'flex-end');
+	}
+
 	&.special {
 		@include vendor('justify-content', 'center');
 		width: 100%;

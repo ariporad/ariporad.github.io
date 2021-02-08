@@ -48,7 +48,8 @@ a {
 
 	&:hover {
 		border-bottom-color: transparent;
-		color: _palette(fg-bold) !important;
+		// color: _palette(fg-bold) !important;
+		color: darken(_palette(fg-bold), 25%);
 	}
 
 	&.special:not(.brands) {
