@@ -53,7 +53,7 @@ $font: (
 
 // Palette.
 $palette: (
-	bg: #2e3141,
+	bg: hsl(208, 90%, 20%),
 	fg: #ffffff,
 	fg-bold: #ffffff,
 	fg-light: rgba(255, 255, 255, 0.35),
@@ -61,5 +61,5 @@ $palette: (
 	border-bg: rgba(255, 255, 255, 0.025),
 	border2: rgba(255, 255, 255, 0.25),
 	border2-bg: rgba(255, 255, 255, 0.075),
-	accent: #4c5c96,
+	accent: #2079c7,
 );

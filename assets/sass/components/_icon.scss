@@ -30,4 +30,10 @@
 			font-family: 'Font Awesome 5 Brands';
 		}
 	}
+
+	&.portrait {
+		background-image: url(/images/portrait.jpg);
+		background-size: contain;
+		background-clip: padding-box;
+	}
 }

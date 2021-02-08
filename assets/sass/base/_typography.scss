@@ -51,8 +51,15 @@ a {
 		color: _palette(fg-bold) !important;
 	}
 
-	&.special:not(.button) {
+	&.special:not(.brands) {
 		@include icon(false, solid);
+	}
+
+	&.special.brands {
+		@include icon(false, brands);
+	}
+
+	&.special:not(.button) {
 		border-bottom: 0;
 		display: block;
 		font-family: _font(family-heading);
@@ -66,7 +73,7 @@ a {
 			@include vendor('transition', 'background-color #{_duration(transition)} ease-in-out');
 			border-radius: 100%;
 			border: solid 2px _palette(border);
-			content: '\f105';
+			// content: '\f105'; // Replaced by additional fa-angle-right class
 			display: inline-block;
 			font-size: 1.25em;
 			height: 2em;
