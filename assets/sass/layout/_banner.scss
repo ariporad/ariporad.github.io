@@ -26,14 +26,14 @@
 			cursor: default;
 			display: inline-block;
 			font-size: 2em;
-			height: 2.25em;
-			line-height: 2.25em;
+			height: 4em;
+			// line-height: 5em;
 			text-align: center;
-			width: 2.25em;
+			width: 4em;
 		}
 	}
 
-	h2 {
+	.title-wrapper {
 		@include vendor(
 			'transition',
 			('opacity 0.5s ease', 'transform 0.5s ease', 'filter 0.25s ease')
@@ -46,6 +46,36 @@
 		font-size: 2.25em;
 		margin-bottom: _size(element-margin) * 0.4;
 		padding-bottom: _size(element-margin) * 0.2;
+
+		@include vendor('display', 'flex');
+		@include vendor('flex-direction', 'row');
+		@include vendor('justify-content', 'flex-start');
+		@include vendor('align-items', 'middle');
+
+		h2 {
+			display: inline;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		div.social {
+			display: inline-block;
+			height: 100%;
+		}
+
+		@include breakpoint('<=xsmall') {
+			div.social {
+				display: block;
+			}
+		}
+
+		a {
+			font-size: 0.9em;
+			margin-left: 0.15em;
+			vertical-align: middle;
+			height: 100%;
+			display: inline-block;
+		}
 	}
 
 	p {
@@ -122,7 +152,7 @@
 			opacity: 0;
 		}
 
-		h2 {
+		.title-wrapper {
 			opacity: 0;
 			@include vendor('transform', 'translateX(0.25em)');
 			@include vendor('filter', 'blur(2px)');

@@ -44,6 +44,7 @@ ul.contact {
 
 	@include breakpoint('<=medium') {
 		@include vendor('flex-direction', 'column');
+		// margin: (_size(element-margin) * 1.25) 0 0 0;
 
 		li {
 			margin: (_size(element-margin) * 0.75) 0 0 0;
